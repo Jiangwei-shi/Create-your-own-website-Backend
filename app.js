@@ -8,7 +8,8 @@ import AuthController from "./controllers/users/auth-controller.js";
 
 import mongoose from "mongoose";
 const CONNECTION_STRING =
-  process.env.DB_CONNECTION_STRING || "mongodb+srv://keelworks:portfoliogenerator@cluster0.luzyjno.mongodb.net/?retryWrites=true&w=majority";
+  process.env.DB_CONNECTION_STRING || "mongodb+srv://jiangweishi:Herg9wA8kwas3AtK@buildyourownwebsite.uh7imtw.mongodb.net/?retryWrites=true&w=majority";
+
 
 mongoose.connect(CONNECTION_STRING)
   .then(() => console.log("Database connection successful"))

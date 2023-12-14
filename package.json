@@ -1,0 +1,32 @@
+{
+  "type": "module",
+  "name": "portfolio-generator-backend",
+  "version": "1.0.0",
+  "description": "This is the backend of portfolio generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keelworks/Portfolio-Generator-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keelworks/Portfolio-Generator-Backend/issues"
+  },
+  "homepage": "https://github.com/keelworks/Portfolio-Generator-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.44.0"
+  }
+}

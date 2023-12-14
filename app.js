@@ -19,7 +19,7 @@ const app = express();
 
 const middlewares = [
   cors({
-    origin: ["https://main--resplendent-kitten-26c0ff.netlify.app", "http://localhost:3000"],
+    origin: ["https://main--silver-manatee-cad437.netlify.app/", "http://localhost:3000"],
     credentials: true
   }),
   express.json(),

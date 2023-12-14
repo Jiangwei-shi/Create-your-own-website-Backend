@@ -8,10 +8,10 @@ const usersSchema = new mongoose.Schema(
     lastName: String,
     dob: String,
     email: String,
-    profession:  {
+    websiteStyle:  {
       type: String,
-      default: "Instruction Designer",
-      enum: ["Instruction Designer", "UI/UX Designer", "Graphics Designer"],
+      default: "style 1",
+      enum: ["style 1", "style 2", "style 3"],
     },
     createdAt: { type: Date, default: Date.now },
     location: String,

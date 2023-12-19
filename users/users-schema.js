@@ -22,6 +22,7 @@ const usersSchema = new mongoose.Schema(
       enum: ["admin", "user", "guest", "moderator"],
     },
     styleOnePhotos:[String],
+    styleOneText:[String],
     BackgroundMusic: String,
   },
   { collection: "users" }

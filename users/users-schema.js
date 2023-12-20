@@ -23,6 +23,8 @@ const usersSchema = new mongoose.Schema(
     },
     styleOnePhotos:[String],
     styleOneText:[String],
+    styleTwoPhoto:[String],
+    styleTwoText:[String],
     BackgroundMusic: String,
   },
   { collection: "users" }

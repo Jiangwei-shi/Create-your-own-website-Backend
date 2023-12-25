@@ -19,7 +19,9 @@ const app = express();
 
 const middlewares = [
   cors({
-    origin: ["https://buildyourownwebsite.netlify.app", "http://localhost:3000"],
+    origin: ["https://buildyourownwebsite.netlify.app",
+      "https://loveletter.netlify.app/",
+      "http://localhost:3000"],
     credentials: true
   }),
   express.json(),

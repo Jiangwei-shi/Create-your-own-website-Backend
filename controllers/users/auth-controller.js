@@ -15,14 +15,22 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const username = req.body.username;
-  const password = req.body.password;
-  const user = await usersDao.findUserByCredentials(username, password);
-  if (user) {
-    req.session["currentUser"] = user;
-    res.json(user);
-  } else{
-    res.sendStatus(403);
+  try {
+    const username = req.body.username;
+    const password = req.body.password;
+    const loginVerify = await usersDao.findUserByCredentials(username, password);
+    if (loginVerify) {
+      req.session["currentUser"] = loginVerify;
+      res.json(loginVerify);
+    } else {
+      const usernameExists = await usersDao.findUserByUsername(username);
+      if (usernameExists) {
+        return res.status(400).json({ message: "Username already registered" });
+      }
+      res.sendStatus(403);
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
   }
 };
 
